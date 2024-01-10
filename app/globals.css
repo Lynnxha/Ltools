@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", sans-serif;
+  }
+  body {
+    @apply text-light1 bg-dark0 w-full h-full max-w-5xl mx-auto;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl font-bold leading-tight text-center;
+  }
+  h2 {
+    @apply text-xl md:text-3xl font-bold leading-tight text-center;
+  }
+  h3 {
+    @apply text-lg md:text-2xl font-bold leading-tight;
+  }
+  h4 {
+    @apply text-base md:text-xl font-bold leading-tight;
+  }
+  h5 {
+    @apply text-sm md:text-base font-bold leading-tight capitalize;
+  }
+  h6 {
+    @apply text-xs md:text-sm font-bold leading-tight;
+  }
+  p {
+    @apply text-sm leading-tight;
+  }
+  fieldset {
+    @apply border-2 border-light1 p-1 rounded w-full w-full  text-start;
+  }
+  legend {
+    @apply px-2 capitalize text-sm uppercase;
+  }
+  input {
+    @apply bg-transparent outline-none w-full;
+  }
+  button {
+    @apply outline-none flex justify-center items-center text-center;
+  }
+  nav {
+    @apply px-5 fixed top-0 left-0 z-50 flex justify-between items-center h-14 w-full backdrop-filter backdrop-blur-sm bg-opacity-80 bg-dark0;
+  }
+}
+
+.blueButton {
+  background-color: blue;
+  color: white;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* Global Style */
+.flexCenterCenter {
+  @apply flex items-center justify-center gap-3;
+}
+.flexBetweenCenter {
+  @apply flex items-center justify-between gap-3;
+  margin-top: 300px;
+}
+.flexCenterMargin {
+  @apply flex flex-col justify-center items-center mt-20 px-5 py-4 gap-10 w-full max-w-4xl mx-auto;
+}
+.flexColCenter {
+  @apply flex flex-col items-center;
+}
+.borderAquaGrid {
+  @apply border-2 border-aqua p-1 rounded-md grid gap-2;
+}
+.descCenter {
+  @apply text-center flex justify-center mt-2;
+}
+.btn {
+  @apply rounded  text-dark0 font-semibold h-10 px-2;
+}
+.btn-normal {
+  @apply bg-light1 rounded px-2 py-3 w-full text-dark0 font-semibold;
+}
+.btn-delete {
+  @apply text-red bg-dark2 rounded w-full px-3;
+}
+.btn-edit {
+  @apply text-yellow bg-dark2 rounded w-full px-3;
+}
+.btn-done {
+  @apply text-green bg-dark2 rounded w-full px-3;
+}
+.about {
+  @apply mt-20 grid gap-10 h-full px-10;
+}
+
+.button-add-container {
+  @apply w-full flex justify-end mt-5 relative;
+}
+.button-add {
+  @apply transition-all ease-in  h-12 w-12 bg-dark1 rounded-md flex justify-center items-center text-light2 fixed bottom-10
+  hover:rotate-90  hover:text-aqua;
+}
+
+/* Nav Section */
+.nav-content {
+  @apply flex justify-between items-center w-full;
+}
+.nav-links {
+  @apply flex justify-between items-center gap-5;
+}
+
+/* Homepage */
+.container {
+  @apply w-full h-full mx-auto mt-20;
+}
+.container-box {
+  @apply w-full h-full my-10 flex flex-wrap gap-5 justify-center;
+}
+.box-tools {
+  @apply w-full border border-dark2 capitalize p-5 rounded-md flex justify-center items-center gap-3 text-light1
+  hover:bg-dark1 hover:border-aqua hover:text-aqua;
+}
+
+/* Calculator Section */
+.result {
+  @apply bg-dark2 h-16 md:h-20 md:w-96 py-2 px-3 rounded text-end mb-5;
+}
+.keypad {
+  @apply grid grid-cols-4 gap-4 p-2 font-bold;
+}
+.btn-math {
+  @apply bg-aqua_alt h-16 w-16 text-center rounded-full text-2xl place-self-center;
+}
+.btn-calc {
+  @apply bg-dark2 h-16 w-16 text-center rounded-full text-2xl place-self-center;
+}
+.btn-calc-del {
+  @apply bg-red h-16 w-16 text-2xl rounded-full place-self-center;
+}
+
+/* Dropdown Component */
+.dropdown {
+  @apply w-full h-full relative;
+}
+.dropdown-content {
+  @apply absolute top-8 px-1 left-0 w-full h-32 overflow-y-auto bg-dark2 rounded-md appearance-none;
+}
+.dropdown-item {
+  @apply bg-dark2 py-1 rounded-md cursor-pointer;
+}
+
+/* Notes section */
+.note-container {
+  @apply relative w-full h-full;
+}
+.note-list {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-2 md:px-0 gap-5 items-center place-items-center;
+}
+.note-item {
+  @apply p-2 h-full max-h-40 w-full relative rounded;
+}
+.note-item-top-menu {
+  @apply flex justify-between items-center gap-3;
+}
+.note-item-body {
+  @apply line-clamp-4 md:line-clamp-3 overflow-hidden font-medium text-base;
+}
+
+/* TodoList Section */
+.todo-add-cancel {
+  @apply bg-red px-5 rounded;
+}
